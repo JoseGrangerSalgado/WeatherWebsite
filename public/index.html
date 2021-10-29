@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" href="../public/CSS/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <header>
+        <p id="head">Weather Webpage - Made by Jose Granger Salgado</p>
+    </header>
+    <body>
+        <div class="grid-container">
+            
+        <input id ="image1" onclick="window.location.href='#map'; initMap(56.76773,-96.8097,4);" type="image" src="../public/images/Canada.png" alt="Canada" />
+        <input id ="image2" onclick="window.location.href='#map'; initMap(41.850033,-97.6500523,4.2);" type="image" src="../public/images/US.png" alt="US" />
+        <input id ="image2" onclick="window.location.href='#map'; initMap(19.4263466279,-99.1266128269,5);" type="image" src="../public/images/Mexico.png" alt="Mexico" />
+        
+        </div>
+        <div class="grid-container2">
+        <div id="map"></div>
+        <div id="table">
+            <table>
+              <col width="60%">
+              <col width="40%">
+              <tr>
+                <td class="subtitle">Location</td>
+                <td id="Location">Default</td>
+              </tr>
+              <tr>
+                <td class="subtitle">Condition</td>
+                <td id="Condition">Default</td>
+              </tr>
+              <tr>
+                <td class="subtitle">Temperature (C)</td>
+                <td id="Temperature">Default</td>
+              </tr>
+              <tr>
+                <td class="subtitle">Humidity</td>
+                <td id="Humidity">Default</td>
+              </tr>
+              <tr>
+                <th id="return" onclick = "location.href = '#head'">Click here to return</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        
+    
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQU0Nqxm661X0SpW83lAOPgRPmasZRXtU&callback=initMap&v=weekly"
+            async
+        ></script>
+        <script src="../public/JS/index.js"></script>
+    </body>
+</html>
